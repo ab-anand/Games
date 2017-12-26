@@ -1,5 +1,5 @@
 # Project - Blackjack
-# project-url - http://www.codeskulptor.org/#user44_zO4zuFQx4qO7VQT.py
+# project-url - http://www.codeskulptor.org/#user44_zO4zuFQx4qO7VQT_0.py
 
 import simplegui
 import random
@@ -149,23 +149,22 @@ def stand():
     # replace with your code below
     global dealer_hand, in_play, score, message, deck, player_hand, stand
 
-    if player_hand.get_value() > 16:
-        stand = True
-        if in_play:# if hand is in play, repeatedly hit dealer until his hand has value 17 or more
-            while dealer_hand.get_value() < 17:
-                dealer_hand.add_card(deck.deal_card())
-            if dealer_hand.get_value() > 21: # assign a message to outcome, update in_play and score
-                message[1] = 'Dealer busted!!'
-                score += 1
+    stand = True
+    if in_play:# if hand is in play, repeatedly hit dealer until his hand has value 17 or more
+        while dealer_hand.get_value() < 17:
+            dealer_hand.add_card(deck.deal_card())
+        if dealer_hand.get_value() > 21: # assign a message to outcome, update in_play and score
+            message[1] = 'Dealer busted!!'
+            score += 1
+        else:
+            if dealer_hand.get_value() >= player_hand.get_value():
+                message[1] = 'Dealer wins!'
+                score -= 1
             else:
-                if dealer_hand.get_value() >= player_hand.get_value():
-                    message[1] = 'Dealer wins!'
-                    score -= 1
-                else:
-                    message[1] = 'Player wins!'
-                    score += 1
-        message[0] = 'New deal?'
-        in_play = False
+                message[1] = 'Player wins!'
+                score += 1
+    message[0] = 'New deal?'
+    in_play = False
     
 
 # draw handler    

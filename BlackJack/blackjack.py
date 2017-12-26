@@ -1,5 +1,5 @@
 # Project - Blackjack
-# project-url - http://www.codeskulptor.org/#user44_zO4zuFQx4qO7VQT_3.py
+# project-url - http://www.codeskulptor.org/#user44_zO4zuFQx4qO7VQT_4.py
 
 import simplegui
 import random
@@ -178,6 +178,8 @@ def draw(canvas):
     canvas.draw_text("4. Card totals over 21 are bust.", (345, 586), 14, 'Yellow')
     canvas.draw_text("5. Card total of 21 is 'blackjack.'", 
    
+    canvas.draw_text('Dealer', (60, 220), 25, "white")
+    canvas.draw_text('Player', (60, 420), 25, "white")             
     canvas.draw_text(message[0], (400, 350), 30, "yellow")
     canvas.draw_text(message[1], (400, 420), 30, "yellow")
     canvas.draw_text(("SCORE: " + str(score)), (400, 50), 30, "yellow")

@@ -1,5 +1,5 @@
 # Project - Blackjack
-# project-url - http://www.codeskulptor.org/#user44_zO4zuFQx4qO7VQT_0.py
+# project-url - http://www.codeskulptor.org/#user44_zO4zuFQx4qO7VQT_3.py
 
 import simplegui
 import random
@@ -170,6 +170,14 @@ def stand():
 # draw handler    
 def draw(canvas):
     # test to make sure that card.draw works, replace with your code below
+    canvas.draw_polyline([(340, 500), (340, 610), (590, 610), (590, 500), (340, 500)], 3, 'Maroon')
+    canvas.draw_text("Rules", (445, 520), 21, 'aqua')
+    canvas.draw_text("1. Highest hand of 21 or less wins.", (345, 535), 14, 'Yellow')
+    canvas.draw_text("2. Tie goes to the dealer.", (345, 552), 14, 'Yellow')
+    canvas.draw_text("3. Dealer hits until cards total at least 17.", (345, 569), 14, 'Yellow')
+    canvas.draw_text("4. Card totals over 21 are bust.", (345, 586), 14, 'Yellow')
+    canvas.draw_text("5. Card total of 21 is 'blackjack.'", 
+   
     canvas.draw_text(message[0], (400, 350), 30, "yellow")
     canvas.draw_text(message[1], (400, 420), 30, "yellow")
     canvas.draw_text(("SCORE: " + str(score)), (400, 50), 30, "yellow")
@@ -186,7 +194,7 @@ def draw(canvas):
 
 
 # initialization frame
-frame = simplegui.create_frame("Blackjack", 600, 600)
+frame = simplegui.create_frame("Blackjack", 600, 620)
 frame.set_canvas_background("Green")
 
 # create buttons and canvas callback

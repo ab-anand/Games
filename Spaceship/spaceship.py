@@ -1,5 +1,5 @@
 # project - spaceship
-# project_url - http://www.codeskulptor.org/#user44_bDksv67Sukgr5HT.py
+# project_url - http://www.codeskulptor.org/#user44_NkDcbxzj6Cqayys.py
 # __author__ = Abhinav Anand
 
 import simplegui
